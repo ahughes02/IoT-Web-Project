@@ -1,7 +1,16 @@
 ﻿@{
     ViewBag.Title = "Wireless Sensors Project";
 }
-<h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+<script type="text/javascript" src="@Url.Content("/Scripts/Views/WirelessSensors.js")"></script>
 
-<p>This area will descibe the project</p>
+<h2>@ViewBag.Title</h2>
+
+<p>Galileo IP: <input id ="galileoIP" type="text" value="192.168.0.106" /></p>
+
+<p><a class="btn btn-default ping">Ping Galileo</a></p>
+
+<p id="pingResponse"></p>
+
+<div id="urls-container" style="display:none">
+    @Html.Hidden("ping-url", Url.Action("pingGalileo", "Galileo", null))
+</div>
