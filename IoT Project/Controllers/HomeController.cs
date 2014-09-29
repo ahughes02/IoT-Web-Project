@@ -15,8 +15,6 @@ namespace IoT_Project.Controllers
 
         public ActionResult WirelessSensors()
         {
-            ViewBag.Message = "Wireless sensors project homepage.";
-
             return View();
         }
     }
