@@ -66,6 +66,8 @@ namespace IoT_Project.Controllers
             catch (TimeoutException)
             { }
 
+            port.Close();
+
             return response;
         }
     }
