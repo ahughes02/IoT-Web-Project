@@ -5,7 +5,7 @@
     });
 
     $(".request").click(function (event) {
-        pingGalileo($("#comPort").val());
+        requestTemp($("#comPort").val());
     });
 });
 

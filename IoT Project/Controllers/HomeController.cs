@@ -13,7 +13,8 @@ namespace IoT_Project.Controllers
             return View();
         }
 
-        public ActionResult WirelessSensors()
+        public ActionResult SensorHub
+            ()
         {
             return View();
         }
