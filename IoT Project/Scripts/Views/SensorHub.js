@@ -16,7 +16,7 @@ function pingGalileo(ip) {
         type: "GET",
         "data": { ip: ip },
         success: function (result) {
-            var p = $("#pingResponse");
+            var p = $("#response");
             p.empty();
             p.append(result);
         },
@@ -32,7 +32,7 @@ function requestTemp(port) {
         type: "GET",
         "data": { COM: port },
         success: function (result) {
-            var p = $("#requestResponse");
+            var p = $("#response");
             p.empty();
             p.append(result);
         },
