@@ -7,7 +7,8 @@
 <h2>@ViewBag.Title</h2>
 
 <p>Galileo IP: <input id ="galileoIP" type="text" value="192.168.0.106" /> COM Port: <input id="comPort" type="text" value="COM3" /></p>
-<p><a class="btn btn-default ping">Ping Galileo</a><a class="btn btn-default request" style="margin-left:10px">Request Data</a></p>
+<p class="info">Press ping to verify that the Galileo is on and connected to the network. <br /> Press start to begin recieving data. Data will update every five seconds. Press stop to stop recieving data. </p>
+<p><a class="btn btn-default ping">Ping Galileo</a> <a class="btn btn-default start" style="margin-left:10px">Start</a> <a class="btn btn-default stop" style="margin-left:10px; display:none">Stop</a></p>
 <p id="response"></p>
 
 <div id="urls-container" style="display:none">

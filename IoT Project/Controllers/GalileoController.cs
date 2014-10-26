@@ -44,8 +44,8 @@ namespace IoT_Project.Controllers
 
             var port = new SerialPort(COM, 9600, Parity.None, 8, StopBits.One)
             {
-                ReadTimeout = 500,
-                WriteTimeout = 500
+                ReadTimeout = 1000,
+                WriteTimeout = 1000
             };
 
             try

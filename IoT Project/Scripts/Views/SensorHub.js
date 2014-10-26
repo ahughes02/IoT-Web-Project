@@ -1,11 +1,22 @@
-﻿$(document).ready(function () {
+﻿var interval;
+
+$(document).ready(function () {
     // set up click events
     $(".ping").click(function (event) {
         pingGalileo($("#galileoIP").val());
     });
 
-    $(".request").click(function (event) {
-        requestTemp($("#comPort").val());
+    $(".start").click(function (event) {
+        $(this).hide();
+        $(".stop").show();
+        requestData($("#comPort").val());
+        interval = setInterval(requestTemp($("#comPort").val()), 5000);
+    });
+
+    $(".stop").click(function (event) {
+        $(this).hide();
+        $(".start").show();
+        window.clearInterval(interval);
     });
 });
 
@@ -26,7 +37,7 @@ function pingGalileo(ip) {
 }
 
 // Requests data from the Galileo
-function requestTemp(port) {
+function requestData(port) {
     $.ajax({
         url: $("#galileo-request-url").val(),
         type: "GET",
