@@ -10,7 +10,7 @@ $(document).ready(function () {
         $(this).hide();
         $(".stop").show();
         requestData($("#comPort").val());
-        interval = setInterval(requestTemp($("#comPort").val()), 5000);
+        interval = setInterval(requestData($("#comPort").val()), 5000);
     });
 
     $(".stop").click(function (event) {
