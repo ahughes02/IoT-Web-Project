@@ -62,6 +62,8 @@ namespace IoT_Project.Controllers
             try
             {
                 response = port.ReadLine();
+                response += "<br>" + port.ReadLine();
+                response += "<br>" + port.ReadLine();
             }
             catch (TimeoutException)
             { }
