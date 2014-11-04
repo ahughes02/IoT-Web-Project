@@ -6,12 +6,13 @@ $(document).ready(function () {
         pingGalileo($("#galileoIP").val());
     });
 
-    $(".start").click(function (event) {
+   $(".start").click(function (event) {
         $(this).hide();
         $(".stop").show();
-        requestData($("#comPort").val());
-        interval = setInterval(requestData($("#comPort").val()), 5000);
-    });
+        interval = window.setInterval(function(){
+			requestData($("#comPort").val());
+		}, 5000);
+	});
 
     $(".stop").click(function (event) {
         $(this).hide();
